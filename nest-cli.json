@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-services/src",
+  "monorepo": true,
+  "root": "apps/api-services",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api-services/tsconfig.app.json"
+  },
+  "projects": {
+    "customer-services": {
+      "type": "application",
+      "root": "apps/customer-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/customer-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/customer-services/tsconfig.app.json"
+      }
+    },
+    "promoter-services": {
+      "type": "application",
+      "root": "apps/promoter-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/promoter-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/promoter-services/tsconfig.app.json"
+      }
+    },
+    "admin-services": {
+      "type": "application",
+      "root": "apps/admin-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/admin-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/admin-services/tsconfig.app.json"
+      }
+    }
+  }
+}
